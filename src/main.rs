@@ -17,7 +17,7 @@ async fn main() {
     //sleep(Duration::from_secs(10)).await;
 
     while let Some(res) = set.join_next().await {
-        let e = res.unwrap();
+        let _ = res.unwrap();
     }
     // We can wait for the blocking task like this:
     // If the blocking task panics, the unwrap below will propagate the
