@@ -8,7 +8,7 @@ async fn main() {
     // This is running on a core thread.
     let mut set = JoinSet::new();
     
-    for i in 0..u32::MAX {
+    for i in 0..100000000 {
         let k = i;
         let _ =  set.spawn(async move {
             let _ = job(k).await;
